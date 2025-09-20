@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Professional Logistics Color Palette */
+    --background: 220 33% 97%; /* #F5F7FA */
+    --foreground: 0 0% 13%; /* #212121 */
+
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 0 0% 13%; /* #212121 */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    /* Primary Blue Theme */
+    --primary: 207 78% 51%; /* #1E88E5 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Dark Blue for headers/navbar */
+    --secondary: 213 85% 43%; /* #1565C0 */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Light Blue for sections */
+    --muted: 210 88% 96%; /* #E3F2FD */
+    --muted-foreground: 0 0% 46%; /* #757575 */
+
+    /* Accent stays blue theme */
+    --accent: 210 88% 96%;
+    --accent-foreground: 213 85% 43%;
+
+    /* Success Green for positive metrics */
+    --success: 122 40% 45%; /* #43A047 */
+    --success-foreground: 0 0% 100%;
+
+    /* Warning Orange for alerts */
+    --warning: 35 97% 49%; /* #FB8C00 */
+    --warning-foreground: 0 0% 100%;
+
+    /* Error Red for critical issues */
+    --destructive: 4 78% 56%; /* #E53935 */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%; /* #E0E0E0 */
+    --input: 0 0% 88%;
+    --ring: 207 78% 51%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar using dark blue theme */
+    --sidebar-background: 213 85% 43%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 207 78% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 85% 35%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 85% 35%;
+    --sidebar-ring: 207 78% 51%;
+
+    /* Vehicle Route Colors for Maps */
+    --vehicle-1: 207 78% 51%; /* Blue */
+    --vehicle-2: 122 40% 45%; /* Green */
+    --vehicle-3: 35 97% 49%; /* Orange */
+    --vehicle-4: 291 54% 42%; /* Purple #8E24AA */
+    --vehicle-5: 14 89% 53%; /* Deep Orange #F4511E */
+    --vehicle-6: 188 100% 38%; /* Cyan #00ACC1 */
+  }
+
+  .dark {
+    /* Dark mode adaptation of professional palette */
+    --background: 213 85% 8%; /* Dark blue background */
+    --foreground: 0 0% 95%;
+
+    --card: 213 85% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 213 85% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 207 78% 51%; /* Keep primary blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 213 85% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 213 85% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 213 85% 15%;
+    --accent-foreground: 207 78% 51%;
+
+    --success: 122 40% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 35 97% 49%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 4 78% 56%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 213 85% 20%;
+    --input: 213 85% 20%;
+    --ring: 207 78% 51%;
+    
+    --sidebar-background: 213 85% 6%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 207 78% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 85% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 213 85% 15%;
+    --sidebar-ring: 207 78% 51%;
+
+    /* Vehicle colors remain the same for consistency */
+    --vehicle-1: 207 78% 51%;
+    --vehicle-2: 122 40% 45%;
+    --vehicle-3: 35 97% 49%;
+    --vehicle-4: 291 54% 42%;
+    --vehicle-5: 14 89% 53%;
+    --vehicle-6: 188 100% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
